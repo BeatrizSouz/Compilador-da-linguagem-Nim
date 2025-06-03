@@ -20,8 +20,11 @@ O objetivo deste projeto é aplicar, de forma prática, os assuntos teóricos vi
 
 
 ## 💻 Tecnologias usadas 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" alt="python logo" width="70">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nim/nim-original-wordmark.svg" alt="nim logo" width="70" >
+<p float="left">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" alt="python logo" width="70">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nim/nim-original-wordmark.svg" alt="nim logo" width="70">
+</p>
+
           
 
 📑 [Documentação da linguagem](https://nim-lang.org/documentation.html)                                                   
