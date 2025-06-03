@@ -5,7 +5,7 @@ Projeto proposto na disciplina de  Linguagens Formais e Tradutores do curso de S
 ## Objetivo 
 
 ## 📖Equipe:
-- [x] [Beatriz de Souza Carvalho]([(https://github.com/BeatrizSouz)])
+- [x] [Beatriz de Souza Carvalho](https://github.com/BeatrizSouz)
 - [x] [David Cardoso](URL_do_link)
 - [X] [João Keweni](URL_do_link)
 - [x] [Luiz Guilherme Andrade Ferreira](URL_do_link)
