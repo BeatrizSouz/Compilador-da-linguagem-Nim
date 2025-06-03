@@ -7,16 +7,16 @@ Projeto proposto na disciplina de Linguagens Formais e Tradutores do curso de Si
 O objetivo deste projeto é aplicar, de forma prática, os assuntos teóricos vistos em aula, criando um compilador para a linguagem Nim. Dessa forma, demonstra-se que os discentes têm domínio do conteúdo e entendem como funciona um compilador.
 
 
-## 🧑‍🏫 Professor:
-- [Andre Luis Meneses Silva](https://github.com/andreluisms)
+## 🏫 Professor:
+- 🧑‍🏫 [Andre Luis Meneses Silva](https://github.com/andreluisms)
 
 ## 📖 Equipe:
 
--  [Beatriz de Souza Carvalho](https://github.com/BeatrizSouz)
--  [David Cardoso](https://github.com/davicardoso5524)
--  [João Keweni](URL_do_link)
--  [Luiz Guilherme Andrade Ferreira](URL_do_link)
--  [Marcos Yago Andrade Gonzaga](https://github.com/MarcosYago17)
+- 💻[Beatriz de Souza Carvalho](https://github.com/BeatrizSouz)
+- 💻[David Cardoso](https://github.com/davicardoso5524)
+- 💻[João Keweni](URL_do_link)
+- 💻[Luiz Guilherme Andrade Ferreira](URL_do_link)
+- 💻[Marcos Yago Andrade Gonzaga](https://github.com/MarcosYago17)
 
 
 ## 💻 Tecnologias usadas 
