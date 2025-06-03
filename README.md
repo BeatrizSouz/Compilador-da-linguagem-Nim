@@ -4,13 +4,13 @@ Projeto proposto na disciplina de Linguagens Formais e Tradutores do curso de Si
 
 
 ## 📌 Objetivo:
-O objetivo deste projeto é
+O objetivo deste projeto é aplicar, de forma prática, os assuntos teóricos vistos em aula, criando um compilador para a linguagem Nim. Dessa forma, demonstra-se que os discentes têm domínio do conteúdo e entendem como funciona um compilador.
 
 
 ## 🧑‍🏫 Professor:
 - [x] [Andre Luis Meneses Silva](https://github.com/andreluisms)
 
-## 📖Equipe:
+## 📖 Equipe:
 
 - [x] [Beatriz de Souza Carvalho](https://github.com/BeatrizSouz)
 - [x] [David Cardoso](URL_do_link)
@@ -20,8 +20,12 @@ O objetivo deste projeto é
 
 
 ## 💻 Tecnologias usadas
+<p> <strong >
+🐍 Phyton
+📑 [Documentação da linguagem](https://nim-lang.org/documentation.html)</strong>                                                    
+<p>
 
-## 📝 Atividades
+## 📝 Atividades:
 Respostas das atividades propostas durantes as aulas da disciplina, separado por cada integrante do grupo.
 
 - [x] [Atividades de Beatriz](URL_do_link)
