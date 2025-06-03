@@ -30,7 +30,7 @@ O objetivo deste projeto é aplicar, de forma prática, os assuntos teóricos vi
 
           
 
-📑 [Documentação da linguagem](https://nim-lang.org/documentation.html)                                                   
+                                             
 
 ## 📁 Atividades:
 Respostas das atividades propostas durantes as aulas da disciplina, separado por cada integrante do grupo.
@@ -43,6 +43,7 @@ Respostas das atividades propostas durantes as aulas da disciplina, separado por
 
 
 
+📑 [Documentação da linguagem](https://nim-lang.org/documentation.html)      
 
 [⬆ Voltar ao topo](#topo)
 
