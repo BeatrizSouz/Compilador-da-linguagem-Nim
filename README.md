@@ -1,9 +1,7 @@
-
 <h1 align="center">
 👑<br>Compilador da linguagem Nim
 </h1>
 
----
 # Sobre
 
 > Projeto proposto na disciplina de Linguagens Formais e Tradutores do curso de Sistemas de Informação da Universidade Federal de Sergipe – Campus Itabaiana. Consiste em um projeto para implementar um compilador na linguagem Nim, usando a linguagem Python. 
