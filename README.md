@@ -13,7 +13,7 @@ O objetivo deste projeto é aplicar, de forma prática, os assuntos teóricos vi
 ## 📖 Equipe:
 
 - [x] [Beatriz de Souza Carvalho](https://github.com/BeatrizSouz)
-- [x] [David Cardoso](URL_do_link)
+- [x] [David Cardoso](https://github.com/davicardoso5524)
 - [X] [João Keweni](URL_do_link)
 - [x] [Luiz Guilherme Andrade Ferreira](URL_do_link)
 - [X] [Marcos Yago Andrade Gonzaga](https://github.com/MarcosYago17)
