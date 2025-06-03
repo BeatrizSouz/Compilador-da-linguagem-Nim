@@ -20,7 +20,8 @@ O objetivo deste projeto é aplicar, de forma prática, os assuntos teóricos vi
 
 
 ## 💻 Tecnologias usadas 
--🐍 Phyton
+![python logo]<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />
+          
 -📑 [<strong >Documentação da linguagem</strong> ](https://nim-lang.org/documentation.html)                                                   
 
 ## 📝 Atividades:
