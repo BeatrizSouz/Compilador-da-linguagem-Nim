@@ -24,14 +24,14 @@ O objetivo deste projeto é aplicar, de forma prática, os assuntos teóricos vi
 
 📑 [<strong >Documentação da linguagem</strong> ](https://nim-lang.org/documentation.html)                                                   
 
-## 📝 Atividades:
+## 📁 Atividades:
 Respostas das atividades propostas durantes as aulas da disciplina, separado por cada integrante do grupo.
 
-- [x] [Atividades de Beatriz](URL_do_link)
-- [x] [Atividades de David ](URL_do_link)
-- [X] [Atividades de João](URL_do_link)
-- [x] [Atividades de Luiz Guilherme ](URL_do_link)
-- [x] [Atividades de  ](URL_do_link)
+- 📂 [Atividades de Beatriz](URL_do_link)
+- 📂 [Atividades de David ](URL_do_link)
+- 📂 [Atividades de João](URL_do_link)
+- 📂 [Atividades de Luiz Guilherme ](URL_do_link)
+- 📂 [Atividades de  ](URL_do_link)
 
 
 
