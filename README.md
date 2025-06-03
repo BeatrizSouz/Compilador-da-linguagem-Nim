@@ -16,10 +16,7 @@ O objetivo deste projeto é
 - [x] [David Cardoso](URL_do_link)
 - [X] [João Keweni](URL_do_link)
 - [x] [Luiz Guilherme Andrade Ferreira](URL_do_link)
-- [ ] [Atividades de  ](URL_do_link)
-- [x] 
-- [x] 
-- [x] 
+- [X] [Atividades de  ](URL_do_link)
 
 
 ## 💻 Tecnologias usadas
@@ -32,7 +29,7 @@ Respostas das atividades propostas durantes as aulas da disciplina, separado por
 - [X] [Atividades de João](URL_do_link)
 - [x] [Atividades de Luiz Guilherme ](URL_do_link)
 - [x] [Atividades de  ](URL_do_link)
-- [x] 
+
 
 
 
