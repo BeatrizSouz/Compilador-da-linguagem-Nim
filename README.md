@@ -1,4 +1,4 @@
- # Compilador-da-linguagem-Nim 👑
+ # Compilador da linguagem Nim 👑
 
 Projeto proposto na disciplina de Linguagens Formais e Tradutores do curso de Sistemas de Informação da Universidade Federal de Sergipe – Campus Itabaiana. Consiste em um projeto para implementar um compilador na linguagem Nim, usando a linguagem Python. 
 
@@ -21,6 +21,7 @@ O objetivo deste projeto é aplicar, de forma prática, os assuntos teóricos vi
 
 ## 💻 Tecnologias usadas 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" alt="python logo" width="70">
+
 - [x]📑 [<strong >Documentação da linguagem</strong> ](https://nim-lang.org/documentation.html)                                                   
 
 ## 📝 Atividades:
