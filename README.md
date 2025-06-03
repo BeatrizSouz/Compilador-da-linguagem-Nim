@@ -4,9 +4,17 @@ Projeto proposto na disciplina de  Linguagens Formais e Tradutores do curso de S
 
 ## Objetivo 
 
-## Equipe 
+## 📖Equipe:
+- [x] @BeatrizSouz
+- [x]
+- [x] 
+- [x] 
+- [x] 
+- [x] 
+- [x] 
+- [x] 
 
-## Professor
+## 🧑‍🏫 Professor
 
 ## 💻 Tecnologias usadas
 [⬆ Voltar ao topo](#Compilador-da-linguagem-Nim)<br>
