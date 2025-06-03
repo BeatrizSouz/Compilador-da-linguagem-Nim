@@ -8,7 +8,7 @@ O objetivo deste projeto é aplicar, de forma prática, os assuntos teóricos vi
 
 
 ## 🧑‍🏫 Professor:
--  [Andre Luis Meneses Silva](https://github.com/andreluisms)
+- [Andre Luis Meneses Silva](https://github.com/andreluisms)
 
 ## 📖 Equipe:
 
