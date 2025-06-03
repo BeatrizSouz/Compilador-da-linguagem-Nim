@@ -14,8 +14,8 @@ O objetivo deste projeto é aplicar, de forma prática, os assuntos teóricos vi
 
 - 💻 [Beatriz de Souza Carvalho](https://github.com/BeatrizSouz)
 - 💻 [David Cardoso](https://github.com/davicardoso5524)
-- 💻 [João Keweni](URL_do_link)
-- 💻 [Luiz Guilherme Andrade Ferreira](URL_do_link)
+- 💻 [João Keweni Santos Resende](https://github.com/JoaoKeweni)
+- 💻 [Luiz Guilherme Andrade Ferreira](https://github.com/ziulGui-0)
 - 💻 [Marcos Yago Andrade Gonzaga](https://github.com/MarcosYago17)
 
 
