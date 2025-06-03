@@ -19,11 +19,9 @@ O objetivo deste projeto é aplicar, de forma prática, os assuntos teóricos vi
 - [X] [Atividades de  ](URL_do_link)
 
 
-## 💻 Tecnologias usadas
-<p> 
+## 💻 Tecnologias usadas 
 🐍 Phyton
 📑 [<strong >Documentação da linguagem</strong> ](https://nim-lang.org/documentation.html)                                                   
-<p>
 
 ## 📝 Atividades:
 Respostas das atividades propostas durantes as aulas da disciplina, separado por cada integrante do grupo.
