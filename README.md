@@ -16,7 +16,7 @@ O objetivo deste projeto é aplicar, de forma prática, os assuntos teóricos vi
 - [x] [David Cardoso](URL_do_link)
 - [X] [João Keweni](URL_do_link)
 - [x] [Luiz Guilherme Andrade Ferreira](URL_do_link)
-- [X] [Atividades de  ](URL_do_link)
+- [X] [Marcos Yago Andrade Gonzaga](https://github.com/MarcosYago17)
 
 
 ## 💻 Tecnologias usadas 
@@ -36,7 +36,7 @@ Respostas das atividades propostas durantes as aulas da disciplina, separado por
 - 📂 [Atividades de David ](URL_do_link)
 - 📂 [Atividades de João](URL_do_link)
 - 📂 [Atividades de Luiz Guilherme ](URL_do_link)
-- 📂 [Atividades de  ](URL_do_link)
+- 📂 [Atividades de Marcos Yago ](URL_do_link)
 
 
 
