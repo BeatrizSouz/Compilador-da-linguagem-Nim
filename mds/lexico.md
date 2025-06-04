@@ -24,7 +24,7 @@ Nim apresenta os operadores aritméticos de **soma (+)**, **subtração (-)**, *
 
 
 #### 3. Delimitadores
-Comandos em Nim utilizam **;** pode ser usado para separar comandos na mesma linha, mas é opcional e raramente utilizado devido à indentação significativa. Parâmetros de funções utiliza **,** como delimitador. Adicionalmente, Nim utiliza os delimitadores **( )** para expressões e chamadas de funções. Dois-pontos **:** para indicar blocos de código (como em Python). Colchetes **[]** para listas, arrays e índices. Por fim, também é utilizado o delimitador **{ }** para conjuntos (sets).
+Comandos em Nim utilizam **;** pode ser usado para separar comandos na mesma linha, mas é opcional e raramente utilizado devido à indentação significativa. Parâmetros de funções utiliza **,** como delimitador. Adicionalmente, Nim utiliza os delimitadores **( )** para expressões e chamadas de funções. Dois-pontos **:** para indicar blocos de código (como em Python). Colchetes **[ ]** para listas, arrays e índices. Por fim, também é utilizado o delimitador **{ }** para conjuntos (sets).
 
 #### 4. Identificadores
 
