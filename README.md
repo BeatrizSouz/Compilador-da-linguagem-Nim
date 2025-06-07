@@ -20,6 +20,8 @@ O objetivo deste projeto é aplicar, de forma prática, os assuntos teóricos vi
 - 💻 [João Keweni Santos Resende](https://github.com/JoaoKeweni)
 - 💻 [Luiz Guilherme Andrade Ferreira](https://github.com/ziulGui-0)
 - 💻 [Marcos Yago Andrade Gonzaga](https://github.com/MarcosYago17)
+- 💻 [Natan](https://github.com/NatanVini7).
+  
 
 
 ## 🔧 Tecnologias usadas 
