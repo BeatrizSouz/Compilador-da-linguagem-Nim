@@ -57,16 +57,48 @@ var `var` = 42
 let `let` = 8
 assert `var` + `let` == 50
 ```
-#### 5. Números
+
+#### 5. Strings
+
+Podem ser delimitados por aspas duplas correspondentes e podem conter as seguintes sequências de escape:
+
+| Sequência de escape | 	  Significado                                    |
+|:-------------------:|:----------------------------------------------------:|
+|    \p         | Para expressões regulares, mapeia uma categoria Unicode    |
+|    \r, \c     |   	                                                     |
+|    \n, \l     |     	    |
+|    \f         |             |
+|    \t         |   |
+|    \v         |            |
+|    \\         |    |
+|    \"         |               |
+|    \'         |               |
+|    \'0'..'9'+ |               |
+|    \um        |               |
+|    \b         |               |
+|    \e         |               |
+|    \x HH      |               |
+|    \u HHHH    |               |
+|    \u {H+}    |               |
+
+
+
+Exemplos: 
+```
+let = "Hello Word"
+```
+
+
+#### 6. Números
 
 Nim dá suporte a números **inteiros**, **reais**, **Hexadecimais**, **Binários** e **Octais**. Os números podem ser positivos ou negativos. Para inteiros, não há obrigatoriedade de sinal, mas o uso de **-** é permitido para negativos.
 
-#### 6. Comentários
+#### 7. Comentários
 Comentários de linha única começam com **#**.
 
 Comentários de múltiplas linhas usam **#[ ... ]#**.
 
-#### 7. Erros
+#### 8. Erros
 Qualquer sequência de caracteres que não se enquadre nas regras acima é considerada um erro léxico.
 Nim também acusa erro ao encontrar identificadores inválidos, números malformados ou uso incorreto de palavras reservadas. 
 
