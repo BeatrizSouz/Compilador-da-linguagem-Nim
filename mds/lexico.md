@@ -38,6 +38,25 @@ _nome
 soma2
 calcula_media
 ```
+#### 4.1 Palavras-chave como identificadores
+
+Se uma palavra-chave estiver entre acentos graves, ela perderá sua propriedade de palavra-chave e se tornará um identificador comum.
+
+```
+var `var` = "Hello Stropping"
+```
+```
+type Obj = object
+  `type`: int
+
+let `object` = Obj(`type`: 9)
+assert `object` is Obj
+assert `object`.`type` == 9
+
+var `var` = 42
+let `let` = 8
+assert `var` + `let` == 50
+```
 #### 5. Números
 
 Nim dá suporte a números **inteiros**, **reais**, **Hexadecimais**, **Binários** e **Octais**. Os números podem ser positivos ou negativos. Para inteiros, não há obrigatoriedade de sinal, mas o uso de **-** é permitido para negativos.
