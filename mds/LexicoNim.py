@@ -66,3 +66,12 @@ reservadas = {
 }
 
     
+tokens = ['PLUS','MINUS','TIMES','DIVIDE','CARET','EXPONENT']+list(reservadas.values())
+
+t_PLUS = r'\+'
+t_MINUS = r'-'
+t_TIMES = r'\*'
+t_DIVIDE = r'\/'
+t_CARET = r'\^'
+t_EXPONENT = r'\**'
+

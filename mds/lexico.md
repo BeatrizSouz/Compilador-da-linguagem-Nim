@@ -65,14 +65,14 @@ Podem ser delimitados por aspas duplas correspondentes e podem conter as seguint
 | Sequência de escape | 	  Significado                                    |
 |:-------------------:|:----------------------------------------------------:|
 |    \p         | Para expressões regulares, mapeia uma categoria Unicode    |
-|    \r, \c     |   	                                                     |
+|    \r, \c     | "Volta" o cursor para o começo da linha                    |
 |    \n, \l     |     	    |
 |    \f         |             |
 |    \t         |   |
 |    \v         |            |
-|    \\         |    |
-|    \"         |               |
-|    \'         |               |
+|    \\         | Barra invertida   |
+|    \"         | Insere aspas             |
+|    \'         | Insere apóstrofo              |
 |    \'0'..'9'+ |               |
 |    \um        |               |
 |    \b         |               |
@@ -82,10 +82,14 @@ Podem ser delimitados por aspas duplas correspondentes e podem conter as seguint
 |    \u {H+}    |               |
 
 
+As Strings também podem ser delimitadas por três aspas duplas """ ... """. Podem ser executados por várias linhas, podem conter " e não precisa usar nenhuma sequência de escape. Quando a abertura """ é seguida por uma nova linha (pode haver espaço em branco entre a abertura """ e a nova linha), a nova linha (e o espaço em branco anterior) não é incluída na cadeia de caracteres. 
 
 Exemplos: 
 ```
 let = "Hello Word"
+let = "Hello\nWord"
+let mensagem = """Texto longo com "aspas" 
+                e quebras de linha."""
 ```
 
 
