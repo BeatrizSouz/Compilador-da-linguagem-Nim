@@ -4,8 +4,10 @@ Nim é uma linguagem de programação estática, imperativa e orientada a objeto
 
 #### 1. Palavras reservadas.
 
-Nim apresenta apenas as seguintes palavras reservas: **if**, **else**, **elif**, **while**, **for**, **break**, **continue**, **return**, **var**, **let**, **const**, **proc**, **func**, **method**, **iterator**,
-**type**, **object**, **tuple**, **array**, **set**, **true**, **false**, **nil**, **import**, **from**, **as**, **try**, **except**, **finally**, **raise**, **discard**, **yield**, **when**, **case**, **of**, **is**, **not**, **and**, **or**, **xor**, **in** e **out**.
+Nim apresenta apenas as seguintes palavras reservas: 
+**addr**, **and**,**as**,**asm**,**bind**, **block**, **break**,**case**,**cast**, **concept**,  **const**, **continue**, **converter**,**defer**, **discard**, **distinct**, **div**, **do**,**elif**, **else**, **end**, **enum** **except**, **export**
+**finally**, **for**, **from**, **func**,**if**, **import**, **in**, **include**, **interface**, **iterator**,
+**let**,**macro**, **mixin**, **mod**,**nil**, **not**, **notin**,**or**, **out**,**proc**, **ptr**,**raise**, **return**,**shl**, **shr**, **static**,**template**, **try**, **tuple**, **type**,**using**,**var**,**when**, **while**,**xor**,**yield**, **true** e **false**.   
 
 #### 2. Operadores
 
