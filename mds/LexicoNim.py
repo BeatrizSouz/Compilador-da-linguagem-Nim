@@ -82,12 +82,11 @@ def t_newline(t):
 def t_error(t):
   print("Illegal character '%s'" % t.value[0])
   t.lexer.skip(1)
-  
+
 t_ignore = ' \t\n'
 
 lexer = lex.lex()
-#
-# # Test it out
+# teste
 
 lexer.input("+\n  - --+\n +  +**/()")
 print('{:10s}{:10s}{:10s}{:10s}'.format("Token", "Lexema", "Linha", "Coluna"))
