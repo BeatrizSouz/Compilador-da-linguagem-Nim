@@ -75,7 +75,9 @@ t_DIVIDE = r'/'
 t_CARET = r'\^'
 t_EXPONENT = r'\*'
 
-def t_newline(t):
+t_ignore = ' \t' #ignora espaço e tabulação
+
+def t_newline(t): #atualiza a linha quando \n
   r'\n+'
   t.lexer.lineno += len(t.value)
 
@@ -83,12 +85,12 @@ def t_error(t):
   print("Illegal character '%s'" % t.value[0])
   t.lexer.skip(1)
 
-t_ignore = ' \t\n'
+
 
 lexer = lex.lex()
 # teste
 
-lexer.input("+\n  - --+\n +  +**/()")
+lexer.input("+\n  - --+\n +  +**/(^^)")
 print('{:10s}{:10s}{:10s}{:10s}'.format("Token", "Lexema", "Linha", "Coluna"))
 for tok in lexer:
   print('{:10s}{:10s}{:10s}{:10s}'.format(tok.type, tok.value, str(tok.lineno), str(tok.lexpos)))

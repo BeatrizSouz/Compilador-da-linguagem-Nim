@@ -30,7 +30,7 @@ Comandos em Nim utilizam **;** pode ser usado para separar comandos na mesma lin
 
 #### 4. Identificadores
 
-Para identificadores, Nim apresenta regra bastante empregada em diferentes linguagens de programação. Nim aceita como identificador válido qualquer sequência de símbolos iniciada por **letras** ou **_**. Após esse simbolo inicial, o identificador pode conter **letras**, **_** e **números**, não terminando com **_** e dois sublinhados imediatamente seguintes **__** não são permitidos. São **case-sensitive** (variavel e Variavel são diferentes) e não podem coincidir com palavras reservadas. Abaixo, alguns exemplos de identifidores válidos:
+Para identificadores, Nim apresenta regra bastante empregada em diferentes linguagens de programação. Nim aceita como identificador válido qualquer sequência de símbolos iniciada por **letras** ou **_**. Após esse simbolo inicial, o identificador pode conter **letras**, **_** e **números**, um id terminando com **_** e dois sublinhados imediatamente seguintes **__** não são permitidos. São **case-sensitive** (variavel e Variavel são diferentes) e não podem coincidir com palavras reservadas. Abaixo, alguns exemplos de identifidores válidos:
 
 ```
 variavel
