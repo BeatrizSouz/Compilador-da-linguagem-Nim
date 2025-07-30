@@ -5,7 +5,7 @@ Nim é uma linguagem de programação estática, imperativa e orientada a objeto
 #### 1. Palavras reservadas.
 
 Nim apresenta apenas as seguintes palavras reservas: 
-*if*, *else*, *while*, *for*, *proc*, *var*, *type*, *return* e *import*
+**if**, **else**, **while**, **for**, **proc**, **var**, **type**, **return** e **import**
 
 **Regras:**  
 - Palavras reservadas são palavras especiais da linguagem que não podem ser usadas diretamente como nomes de variáveis, funções ou outros identificadores.  
