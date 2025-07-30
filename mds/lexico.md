@@ -1,4 +1,4 @@
-# ✨ Linguagem Nim - Elementos Léxicos
+# 👑 Linguagem Nim - Elementos Léxicos
 
 Nim é uma linguagem de programação estática, imperativa e orientada a objetos, com sintaxe inspirada em Python. Ela é usada para demonstrar conceitos modernos de compilação e desempenho. A seguir, destacamos seus elementos léxicos:
 
