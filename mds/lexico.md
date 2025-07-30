@@ -2,6 +2,8 @@
 
 Nim é uma linguagem de programação estática, imperativa e orientada a objetos, com sintaxe inspirada em Python. Ela é usada para demonstrar conceitos modernos de compilação e desempenho. A seguir, destacamos seus elementos léxicos:
 
+---
+
 #### 1. Palavras reservadas.
 
 Nim apresenta apenas as seguintes palavras reservas: 
@@ -16,6 +18,8 @@ Nim apresenta apenas as seguintes palavras reservas:
 ```nim
 var `if` = 10      # válido porque está entre acentos graves
 # var if = 10      # inválido, gera erro pois 'if' é palavra reservada  
+```
+---
 
 #### 2. Operadores
 
@@ -28,9 +32,12 @@ Nim apresenta os operadores aritméticos de **soma (+)**, **subtração (-)**, *
 |          3             |      *, /, mod     |   Esquerda para Direita   |
 |          4             |         ^          |   Direita para Esquerda   |
 
+---
 
 #### 3. Delimitadores
 Comandos em Nim utilizam **;** pode ser usado para separar comandos na mesma linha, mas é opcional e raramente utilizado devido à indentação significativa. Parâmetros de funções utiliza **,** como delimitador. Adicionalmente, Nim utiliza os delimitadores **( )** para expressões e chamadas de funções. Dois-pontos **:** para indicar blocos de código (como em Python). Colchetes **[ ]** para listas, arrays e índices. Por fim, também é utilizado o delimitador **{ }** para conjuntos (sets).
+
+---
 
 #### 4. Identificadores
 
@@ -70,6 +77,8 @@ let `let` = 8
 assert `var` + `let` == 50
 ```
 
+---
+
 #### 5. Strings
 
 Podem ser delimitados por aspas duplas correspondentes e podem conter as seguintes sequências de escape:
@@ -87,7 +96,7 @@ Podem ser delimitados por aspas duplas correspondentes e podem conter as seguint
 
 As Strings também podem ser delimitadas por três aspas duplas """ ... """. Podem ser executados por várias linhas, podem conter " e não precisa usar nenhuma sequência de escape. Quando a abertura """ é seguida por uma nova linha (pode haver espaço em branco entre a abertura """ e a nova linha), a nova linha (e o espaço em branco anterior) não é incluída na cadeia de caracteres. 
 
-Exemplos: 
+**Exemplos:** 
 ```
 let = "Hello Word"
 let = "Hello\nWord"
@@ -95,6 +104,7 @@ let mensagem = """Texto longo com "aspas"
                 e quebras de linha."""
 ```
 
+---
 
 #### 6. Números
  
@@ -111,7 +121,7 @@ Regras:
 - O sinal `-` pode ser usado para números negativos.  
 - Não há obrigatoriedade de sinal para números positivos.  
 
-Exemplos:
+**Exemplos:**
 
 ```nim
 let inteiro = 42
@@ -120,12 +130,15 @@ let real = 3.14
 let hexadecimal = 0xFF
 let binario = 0b1010
 let octal = 0o755
-
+```
+---
 
 #### 7. Comentários
 Comentários de linha única começam com **#**.
 
 Comentários de múltiplas linhas usam **#[ ... ]#**.
+
+---
 
 #### 8. Erros
 Qualquer sequência de caracteres que não se enquadre nas regras acima é considerada um erro léxico.
