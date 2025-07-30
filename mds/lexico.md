@@ -5,24 +5,28 @@ Nim é uma linguagem de programação estática, imperativa e orientada a objeto
 #### 1. Palavras reservadas.
 
 Nim apresenta apenas as seguintes palavras reservas: 
-**addr**, **and**,**as**,**asm**,**bind**, **block**, **break**,**case**,**cast**, **concept**,  **const**, **continue**, **converter**,**defer**, **discard**, **distinct**, **div**, **do**,**elif**, **else**, **end**, **enum** **except**, **export**
-**finally**, **for**, **from**, **func**,**if**, **import**, **in**, **include**, **interface**, **iterator**,
-**let**,**macro**, **mixin**, **mod**,**nil**, **not**, **notin**,**or**, **out**,**proc**, **ptr**,**raise**, **return**,**shl**, **shr**, **static**,**template**, **try**, **tuple**, **type**,**using**,**var**,**when**, **while**,**xor**,**yield**, **true** e **false**.   
+*if*, *else*, *while*, *for*, *proc*, *var*, *type*, *return* e *import*
+
+**Regras:**  
+- Palavras reservadas são palavras especiais da linguagem que não podem ser usadas diretamente como nomes de variáveis, funções ou outros identificadores.  
+- Para usar uma palavra reservada como identificador, deve-se colocá-la entre acentos graves `` ` ``.
+
+**Exemplo:**
+
+```nim
+var `if` = 10      # válido porque está entre acentos graves
+# var if = 10      # inválido, gera erro pois 'if' é palavra reservada  
 
 #### 2. Operadores
 
 Nim apresenta os operadores aritméticos de **soma (+)**, **subtração (-)**, **multiplicação**  (*)**, **divisão (/)**, **módulo (mod)**, **exponenciação (^)**. Também apresenta o **operador =** para atribuições, além de operadores compostos como **+=**, **-=**. Nim possui a seguinte tabela de precedência, apresentada na ordem crescente de prescedência.
 
-| Grau de Precedência | 	  Operador               |     Associativade     |
-|:-------------------:|:----------------------------:|:---------------------:|
-|          1          |     =, :=, +=, -=, *=, /=    | Direita para Esquerda |
-|          2          |   	   or,xor                | Esquerda para direita |
-|          3          |     	    and              | Esquerda para direita |
-|          4          |             not              | Direita para Esquerda |
-|          5          |    ==, !=, <, >, <=, >=, in  | Esquerda para direita |
-|          6          |             +, -             | Esquerda para direita |
-|          7          |    *, /, div, mod, shl, shr  | Esquerda para direita |
-|          8          |              ^    	         | Direita para Esquerda |
+|   Grau de Precedência  |      Operador      |      Associatividade      |
+|:----------------------:|:------------------:|:-------------------------:|
+|          1             |     =, +=, -=      |   Direita para Esquerda   |
+|          2             |        +, -        |   Esquerda para Direita   |
+|          3             |      *, /, mod     |   Esquerda para Direita   |
+|          4             |         ^          |   Direita para Esquerda   |
 
 
 #### 3. Delimitadores
@@ -70,24 +74,15 @@ assert `var` + `let` == 50
 
 Podem ser delimitados por aspas duplas correspondentes e podem conter as seguintes sequências de escape:
 
-| Sequência de escape | 	  Significado                                    |
+| Sequência de escape | 	                Significado                        |
 |:-------------------:|:----------------------------------------------------:|
-|    \p         | Para expressões regulares, mapeia uma categoria Unicode    |
-|    \r, \c     | "Volta" o cursor para o começo da linha                    |
-|    \n, \l     |     	    |
-|    \f         |             |
-|    \t         |   |
-|    \v         |            |
-|    \\         | Barra invertida   |
-|    \"         | Insere aspas             |
-|    \'         | Insere apóstrofo              |
-|    \'0'..'9'+ |               |
-|    \um        |               |
-|    \b         |               |
-|    \e         |               |
-|    \x HH      |               |
-|    \u HHHH    |               |
-|    \u {H+}    |               |
+| \n                  | Nova linha                                           |
+| \t                  | Tabulação                                            |
+| \\                  | Barra invertida                                      |
+| \"                  | Aspas duplas dentro da string                        |
+| \'                  | Apóstrofo dentro da string                           |
+| \r                  | Retorno de carro (carriage return)                   |
+| \xHH                | Caractere com código hexadecimal                     |
 
 
 As Strings também podem ser delimitadas por três aspas duplas """ ... """. Podem ser executados por várias linhas, podem conter " e não precisa usar nenhuma sequência de escape. Quando a abertura """ é seguida por uma nova linha (pode haver espaço em branco entre a abertura """ e a nova linha), a nova linha (e o espaço em branco anterior) não é incluída na cadeia de caracteres. 
@@ -102,8 +97,30 @@ let mensagem = """Texto longo com "aspas"
 
 
 #### 6. Números
+ 
+Nim suporta os seguintes formatos numéricos:
 
-Nim dá suporte a números **inteiros**, **reais**, **Hexadecimais**, **Binários** e **Octais**. Os números podem ser positivos ou negativos. Para inteiros, não há obrigatoriedade de sinal, mas o uso de **-** é permitido para negativos.
+- Inteiros: positivos ou negativos (ex: 10, -5)  
+- Reais: números com ponto decimal (ex: 3.14)  
+- Hexadecimais: prefixo 0x (ex: 0xFF)  
+- Binários: prefixo 0b (ex: 0b1010)  
+- Octais: prefixo 0o (ex: 0o755)  
+
+Regras:
+
+- O sinal `-` pode ser usado para números negativos.  
+- Não há obrigatoriedade de sinal para números positivos.  
+
+Exemplos:
+
+```nim
+let inteiro = 42
+let negativo = -10
+let real = 3.14
+let hexadecimal = 0xFF
+let binario = 0b1010
+let octal = 0o755
+
 
 #### 7. Comentários
 Comentários de linha única começam com **#**.
