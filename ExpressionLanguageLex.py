@@ -7,7 +7,7 @@ reservadas = {
 }
 
 tokens = [
-    'ID', 'NUMBER', 'STRING',
+    'ID', 'INTNUMBER','FLOATNUMBER', 'STRING',
     'SOMA', 'SUB', 'MUL', 'DIV', 'MOD', 'EXP',
     'ATRIB', 'ADICIGUAL', 'SUBIGUAL',
     'PV', 'VIRG', 'LPAREN', 'RPAREN',
@@ -43,6 +43,17 @@ def t_ID(t):
         t.value = lexema
     return t
 
+def t_FLOATNUMBER(t):
+    r'\d+\.\d+'
+    t.value = float(t.value)
+    return t
+
+def t_INTNUMBER(t):
+   r'\d+'
+   t.value = int(t.value)
+   return t
+'''
+fazer uma função para cada int flot hexa octal...
 def t_NUMBER(t):
     r'0[xX][0-9a-fA-F]+|0[bB][01]+|0[oO][0-7]+|\d+\.\d+|\d+'
     if t.value.startswith(('0x', '0X')):
@@ -55,8 +66,8 @@ def t_NUMBER(t):
         t.value = float(t.value)
     else:
         t.value = int(t.value)
-    return t
-
+   return t#
+'''
 def t_STRING(t):
     r'(\"\"\"(.|\n)*?\"\"\"|\"(\\.|[^\\"])*\")'
     t.value = t.value[1:-1]
@@ -88,5 +99,10 @@ def main():
     for tok in lexer:
         print('type:', tok.type, ', value:', tok.value)
 
-if __name__ == "__main__":
-    main()
+#[if __name__ == "__main__":main()]#
+
+lexer = lex.lex()
+entrada = "let cad = 5\nvar a: int\nvar x: float\nif cad == 0:\n   a = 3 mod 5 \n else:\n  x = 5.56 + 123.4\necho a\necho x\n"
+lexer.input(entrada)
+for tok in lexer:
+  print(tok.type, tok.value, tok.lineno, tok.lexpos)
