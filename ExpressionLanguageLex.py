@@ -1,13 +1,13 @@
 import ply.lex as lex
 
 reservadas = {
-    'if': 'IF', 'else': 'ELSE', 'while': 'WHILE', 'for': 'FOR',
+    'if': 'IF', 'elif':'ELIF', 'else': 'ELSE', 'while': 'WHILE', 'for': 'FOR',
     'proc': 'PROC', 'var': 'VAR', 'type': 'TYPE',
     'return': 'RETURN', 'import': 'IMPORT'
 }
 
 tokens = [
-    'ID', 'INTNUMBER','FLOATNUMBER', 'STRING',
+    'ID', 'INTNUMBER','FLOATNUMBER','HEX_INTNUMBER','BIN_INTNUMBER','OCT_INTNUMBER', 'STRING',
     'SOMA', 'SUB', 'MUL', 'DIV', 'MOD', 'EXP',
     'ATRIB', 'ADICIGUAL', 'SUBIGUAL',
     'PV', 'VIRG', 'LPAREN', 'RPAREN',
@@ -43,31 +43,47 @@ def t_ID(t):
         t.value = lexema
     return t
 
-def t_FLOATNUMBER(t):
-    r'\d+\.\d+'
-    t.value = float(t.value)
+# permite "_" como separador dentro dos literais
+underscore_digits = r'(?:[0-9]|_)+'
+
+def _clean_underscores(s):
+    return s.replace('_', '')
+
+
+def t_HEX_INTNUMBER(t):
+    r'0[xX](?:[0-9a-fA-F]|_)+'
+    raw = t.value
+    t.value = int(_clean_underscores(raw[2:]), 16)
     return t
 
+
+def t_BIN_INTNUMBER(t):
+    r'0[bB][01_]+'
+    raw = t.value
+    t.value = int(_clean_underscores(raw[2:]), 2)
+    return t
+
+
+def t_OCT_INTNUMBER(t):
+    r'0[oO][0-7_]+'
+    raw = t.value
+    t.value = int(_clean_underscores(raw[2:]), 8)
+    return t
+
+
+def t_FLOATNUMBER(t):
+    r'\d+(?:_\d+)*\.\d+(?:_\d+)*(?:[eE][+-]?\d+(?:_\d+)*)?'
+    raw = t.value
+    t.value = float(_clean_underscores(raw))
+    return t
+
+
 def t_INTNUMBER(t):
-   r'\d+'
-   t.value = int(t.value)
-   return t
-'''
-fazer uma função para cada int flot hexa octal...
-def t_NUMBER(t):
-    r'0[xX][0-9a-fA-F]+|0[bB][01]+|0[oO][0-7]+|\d+\.\d+|\d+'
-    if t.value.startswith(('0x', '0X')):
-        t.value = int(t.value, 16)
-    elif t.value.startswith(('0b', '0B')):
-        t.value = int(t.value, 2)
-    elif t.value.startswith(('0o', '0O')):
-        t.value = int(t.value, 8)
-    elif '.' in t.value:
-        t.value = float(t.value)
-    else:
-        t.value = int(t.value)
-   return t#
-'''
+    r'\d+(?:_\d+)*'
+    raw = t.value
+    t.value = int(_clean_underscores(raw))
+    return t
+
 def t_STRING(t):
     r'(\"\"\"(.|\n)*?\"\"\"|\"(\\.|[^\\"])*\")'
     t.value = t.value[1:-1]
@@ -102,7 +118,7 @@ def main():
 #[if __name__ == "__main__":main()]#
 
 lexer = lex.lex()
-entrada = "let cad = 5\nvar a: int\nvar x: float\nif cad == 0:\n   a = 3 mod 5 \n else:\n  x = 5.56 + 123.4\necho a\necho x\n"
+entrada = "0x1f 0b1011 0o755 let cad = 5\nvar a: int\nvar x: 6.02e23\nif cad == 0:\n   a = 3 mod 5 \n else:\n  x = 5.56 + 123.4\necho a\necho x\n"
 lexer.input(entrada)
 for tok in lexer:
   print(tok.type, tok.value, tok.lineno, tok.lexpos)
