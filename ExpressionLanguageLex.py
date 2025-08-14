@@ -7,11 +7,11 @@ reservadas = {
 }
 
 tokens = [
-    'ID', 'INTNUMBER','FLOATNUMBER','HEX_INTNUMBER','BIN_INTNUMBER','OCT_INTNUMBER', 'STRING',
+    'ID', 'INDENT', 'DEDENT', 'NEWLINE','INTNUMBER','FLOATNUMBER','HEX_INTNUMBER','BIN_INTNUMBER','OCT_INTNUMBER', 'STRING','CHAR'
     'SOMA', 'SUB', 'MUL', 'DIV', 'MOD', 'EXP',
     'ATRIB', 'ADICIGUAL', 'SUBIGUAL',
     'PV', 'VIRG', 'LPAREN', 'RPAREN',
-    'LCHAV', 'RCHAV', 'LCOLCH', 'RCOLCH', 'DOISPONTOS'
+    'LCHAV', 'RCHAV', 'LCOLCH', 'RCOLCH', 'DOISPONTOS','EQ'
 ] + list(reservadas.values())
 
 t_SOMA       = r'\+'
@@ -32,6 +32,7 @@ t_RCHAV      = r'\}'
 t_LCOLCH     = r'\['
 t_RCOLCH     = r'\]'
 t_DOISPONTOS = r':'
+t_EQ         = r'=='
 
 def t_ID(t):
     r'`?[a-zA-Z][a-zA-Z_0-9]*`?'
@@ -42,6 +43,8 @@ def t_ID(t):
         t.type = 'ID'
         t.value = lexema
     return t
+
+
 
 # permite "_" como separador dentro dos literais
 underscore_digits = r'(?:[0-9]|_)+'
@@ -97,9 +100,43 @@ def t_comment_line(t):
     r'\#.*'
     pass
 
-def t_newline(t):
+indent_pilha = [0]
+def t_NEWLINE(t):
     r'\n+'
+
     t.lexer.lineno += len(t.value)
+
+    cont_linha = t.lexer.lexdata[t.lexer.lexpos:]
+
+    espacos = 0
+
+    for c in cont_linha:
+        if c == ' ':
+            espacos += 1
+        elif c == '\t':
+            break
+        else: 
+            break
+
+
+    if espacos > indent_pilha[-1]:
+        indent_pilha.append(espacos)
+        t.type = 'INDENT'
+        t.value = espacos
+        return t
+    
+    elif espacos < indent_pilha[-1]:
+        ded = 0
+        while indent_pilha and espacos < indent_pilha[-1]:
+            indent_pilha.pop()
+            ded +=1
+        #if espacos != indent_pilha[-1]
+            #raise IndentationError("Indentação inconsistente")
+        t.type = 'DEDENT'
+        t.value = ded
+        return t 
+    else:
+        pass
 
 t_ignore = ' \t\r'
 
@@ -120,5 +157,6 @@ def main():
 lexer = lex.lex()
 entrada = "0x1f 0b1011 0o755 let cad = 5\nvar a: int\nvar x: 6.02e23\nif cad == 0:\n   a = 3 mod 5 \n else:\n  x = 5.56 + 123.4\necho a\necho x\n"
 lexer.input(entrada)
+
 for tok in lexer:
   print(tok.type, tok.value, tok.lineno, tok.lexpos)
