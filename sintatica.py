@@ -6,12 +6,9 @@ import logging
 
 def p_programa(p):
     '''Programa : smt 
-                | smt IND{=}
-                | smt;'''
-    if(len(p) == 2):
-        p[0] = p[1]
-    else:
-        p[0] = p[1]
+                | smt PV'''
+    p[0] = p[1]
+    
     
 
 def p_smt(p):
@@ -54,3 +51,31 @@ def p_string(p):
 def p_char(p):
     '''char : CHAR'''
     p[0] = p[1]
+
+def p_ifStm(p):
+    '''ifStm : IF exp DOISPONTOS codigo
+             | IF exp DOISPONTOS codigo cond ifStm'''
+    if len(p) == 10:
+        p[0] = [p[2],p[3]]
+    else:
+        p[0] = [p[5],p[6]] + p[7]
+
+def p_whenStm(p):
+    '''whenStm : WHEN exp DOISPONTOS codigo
+        | WHEN exp DOISPONTOS codigo cond whenStm'''
+
+def p_whileStm(p):
+    '''whileStm : WHILE exp DOISPONTOS codigo
+                | WHILE exp DOISPONTOS codigo whileStm'''
+
+def p_cond(p):
+    '''cond :  ELIF exp DOISPONTOS codigo
+            | ELIF exp DOISPONTOS codigo cond 
+            | ELSE DOISPONTOS 
+            | ELSE DOISPONTOS cond '''
+
+def p_codigo(p):
+    '''cond : ELIF exp DOISPONTOS codigo
+            | ELIF exp DOISPONTOS codigo cond 
+            | ELSE DOISPONTOS 
+            | ELSE DOISPONTOS cond '''
