@@ -1,14 +1,34 @@
-Program :smt 
-         |smt IND{=}
-         |smt; 
+Programa :smt  
+        |smt PV
 
-Smt : ifStm
-     |whenStm
-     |whileStm
-     |ForStm
+Smt :  ifStm
+     | whenStm
+     | whileStm
+     | ForStm
+
+tipo : inteiro
+     | float
+     | boolean
+     | string
+     | char
+
+inteiro : INT
+        | INT8
+        | INT16
+        | INT32
+        | INT64
+
+float : FLOAT32
+      | FLOAT64
+
+boolean : BOOL
+
+string : STRING
+
+char : CHAR
 
 ifStm : IF exp DOISPONTOS codigo
-      |IF exp DOISPONTOS codigo cond ifStm
+      | IF exp DOISPONTOS codigo cond ifStm
 
 #dúvida em when só aceita exp como constante ou nada que seja definido em tempo de execução. Tenho que mudar a regra por causa disso ?
 
@@ -16,9 +36,36 @@ whenStm : WHEN exp DOISPONTOS codigo
         | WHEN exp DOISPONTOS codigo cond whenStm
 
 whileStm : WHILE exp DOISPONTOS codigo
-          |WHILE exp DOISPONTOS codigo whileStm
+         | WHILE exp DOISPONTOS codigo whileStm
 
-cond : ELIF exp DOISPONTOS codigo
-       |ELIF exp DOISPONTOS codigo cond 
-       |ELSE DOISPONTOS 
-       |ELSE DOISPONTOS cond 
+cond :  ELIF exp DOISPONTOS codigo
+      | ELIF exp DOISPONTOS codigo cond 
+      | ELSE DOISPONTOS 
+      | ELSE DOISPONTOS cond 
+
+#dúvida sobre essa parte de indentação aqui. Essa gramática aqui cobre o caso de finalizar um bloco de código e em seguida entrar outro ?
+
+codigo : NEWLINE stm 
+       | NEWLINE stm codigo
+       | NEWLINE INDENT stm DED
+       | NEWLINE INDENT stm DED codigo 
+
+
+Explicação da indentação e seu funcionamento, Nim não aceita {} e o bloco de códigos é identado, por isso é necessário identificar (como um token) a indentação 
+no léxico. 
+O lexer conta os espaços que vieram antes de cada token, assim, é possível saber se está entrando em um INDENT( quando entra em um novo bloco ), ex: 
+
+if x > 0: 
+      echo"entrou em novo bloco"
+
+Ou se continua no mesmo  bloco (NEWLINE)
+
+echo "mesmo bloco == ñ pulou a linha"
+
+Ou se o bloco foi fechado (DED)
+if x > 0: 
+      echo"entrou em novo bloco"
+
+echo "O bloco de if foi fechado repare que ñ existe espaços nesse echo"
+
+Assim, não precisa olhar vários tokens para saber onde o bloco acaba, apenas lê os espaços e o próx token (Lookahead 1)
