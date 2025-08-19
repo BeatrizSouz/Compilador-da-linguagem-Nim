@@ -12,7 +12,7 @@
 # exp → exp + exp | exp * exp | exp ^ exp | call | assign | num | id
 
 import ply.yacc as yacc
-from NimLex import *   # aqui entraria seu analisador léxico
+from NimLex import * 
 import SintaxeAbstrata as sa
 
 # ------------------------------
